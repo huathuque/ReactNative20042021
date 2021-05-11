@@ -161,17 +161,20 @@ export default class App extends Component {
           {/* <Text style={styles.textStyleVn}>{this.shouldRenderVn(word)}</Text> */}
         </View>
         <View style={styles.containerTouchable}>
-          <TouchableOpacity style={{padding: 10, backgroundColor: 'green', borderRadius: 5}}>
-            <Text style={{fontSize: 14, color: 'white'}}>Forgot</Text>
+          <TouchableOpacity style={styles.touchForgot}>
+            <Text style={styles.textTouchForgot}>Forgot</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={{padding: 10, backgroundColor: 'yellow', borderRadius: 5}}>
-            <Text style={{fontSize: 14, color: 'navy'}}>Remove</Text>
+          <TouchableOpacity style={styles.touchRemove}>
+            <Text style={styles.textTouchRemove}>Remove</Text>
           </TouchableOpacity>
         </View>
       </View>
     )
   }
 }
+
+// isMemorized : Forgot & màu xanh
+// isMemorized == false : Memorized & màu đỏ
 
 const styles = StyleSheet.create({
   container:{flex: 1,
@@ -195,5 +198,18 @@ const styles = StyleSheet.create({
     color: 'red',
     fontWeight: 'bold',
   },
-
+  touchForgot: {padding: 10,
+    backgroundColor: 'green',
+    borderRadius: 5
+  },
+  touchRemove: {padding: 10,
+    backgroundColor: 'yellow',
+    borderRadius: 5
+  },
+  textTouchForgot:{
+    fontSize: 14, color: 'white'
+  },
+  textTouchRemove:{
+    fontSize: 14, color: 'black'
+  },
 })
